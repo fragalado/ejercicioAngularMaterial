@@ -1,0 +1,19 @@
+<div style="display: flex; justify-content: center; margin-top: 30px;">
+    <div cdkDropListGroup>
+        <div class="example-container">
+            <h2>Stock</h2>
+    
+            <div cdkDropList [cdkDropListData]="stock" class="example-list" (cdkDropListDropped)="drop($event)">
+                <div class="example-box" cdkDrag *ngFor="let item of stock; track item">{{item}}</div>
+            </div>
+        </div>
+    
+        <div class="example-container" style="display: block;">
+            <h2>Sin Stock</h2>
+    
+            <div cdkDropList [cdkDropListData]="sinStock" class="example-list" (cdkDropListDropped)="drop($event)">
+                <div class="example-box" cdkDrag *ngFor="let item of sinStock; track item">{{item}}</div>
+            </div>
+        </div>
+    </div>
+</div>

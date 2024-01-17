@@ -1,0 +1,26 @@
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">  
+
+    <!-- Posicion Column -->
+    <ng-container matColumnDef="posicion">
+      <th mat-header-cell *matHeaderCellDef> Nº </th>
+      <td mat-cell *matCellDef="let element"> {{element.posicion}} </td>
+    </ng-container>
+
+    <!-- Nombre Column -->
+    <ng-container matColumnDef="nombre">
+      <th mat-header-cell *matHeaderCellDef> Nombre </th>
+      <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
+    </ng-container>
+
+    <!-- Cantidad Column -->
+    <ng-container matColumnDef="cantidad">
+      <th mat-header-cell *matHeaderCellDef> Cantidad </th>
+      <td mat-cell *matCellDef="let element"> {{element.cantidad}} </td>
+    </ng-container>
+  
+    <!-- Esto sirve para poner los titulos de la tabla -->
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr> 
+
+    <!-- Esto sirve para mostrar cada fila de la tabla -->
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
